@@ -17,7 +17,7 @@ const errorMsgEl = document.querySelector('.error-msg');
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
     const address = inputEl.value
-    fetch(`http://localhost:5000/weather?address=${address}`).then(response => {
+    fetch(`/weather?address=${address}`).then(response => {
         response.json().then(data => {
             if (data.error) {
                 errorMsgEl.classList.remove('hidden');

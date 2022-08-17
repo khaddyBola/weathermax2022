@@ -11,7 +11,9 @@ app.set('view engine', 'hbs');
 
 
 // PORT Config
-const port = 5000;
+// const port = 5000; // Before we insert heroku
+
+const port = process.env.PORT || 5000;
 
 // RENDERING
 const publicDirectory = path.join(__dirname, '../public');
